@@ -74,7 +74,7 @@ class TCGBackend {
 
     start() {
         const PORT = process.env.PORT || 3000;
-        this.server.listen(PORT, () => {
+        this.server.listen(PORT, '0.0.0.0', () => {
             console.log(`🎴 TCG Backend Server running on port ${PORT}`);
             console.log(`🌐 Frontend: ${process.env.FRONTEND_URL}`);
             console.log(`⚡ Environment: ${process.env.NODE_ENV || 'development'}`);
